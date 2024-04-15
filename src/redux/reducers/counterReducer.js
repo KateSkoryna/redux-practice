@@ -1,5 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { increment, decrement } from "../actions/counterAction";
+import { increment, decrement } from "../actions/CounterAction";
 
 const initialState = 0;
 const counterReducer = createReducer(initialState, (builder) => {

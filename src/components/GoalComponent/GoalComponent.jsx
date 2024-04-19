@@ -1,13 +1,11 @@
-import Form from "../Form/Form"
+import Form from "../GoalForm/GoalForm"
 import GoalList from "../GoalList/GoalList"
-import HomeButton from "../HomeButton/HomeButton";
 
 const GoalComponent = () => {
     return (
         <>
             <Form />
             <GoalList />
-            <HomeButton/>
         </>
     )
 }

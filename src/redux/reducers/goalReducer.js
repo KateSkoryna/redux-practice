@@ -5,10 +5,10 @@ const initialState = [];
 const goalReducer = createReducer(initialState, (builder) => {
   builder
     .addCase(addGoal, (state, action) => {
-      return state.posh(action.payload);
+      return [...state, action.payload];
     })
     .addCase(removeGoal, (state, action) => {
-      return state.filter((goal) => goal.id !== action.payload.id);
+      return state.filter((goal) => goal.id !== action.payload);
     });
 });
 

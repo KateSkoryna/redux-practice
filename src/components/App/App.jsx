@@ -1,11 +1,13 @@
 import './App.css'
-import Counter from '../Counter/Counter'
+import Navigation from '../Navigation/Navigation';
+import { Outlet  } from "react-router-dom";
 
 function App() {
   return (
     <>
       <div className='container'>
-        <Counter/>
+        <Navigation />
+        <Outlet/>
       </div>
     </>
   )

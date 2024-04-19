@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-import { increment, decrement } from "../../redux/actions/CounterAction";
+import { increment, decrement } from "../../redux/actions/counterAction";
+import HomeButton from "../HomeButton/HomeButton";
 
 const Counter = () => {
     const counter = useSelector((state) => state.counter);
@@ -18,6 +19,7 @@ const Counter = () => {
             <h2>Counter Value: {counter}</h2>
             <button onClick={handleIncrement}>Increment</button>
             <button onClick={handleDecrement}>Decrement</button>
+            <HomeButton/>
         </div>
     )
 };

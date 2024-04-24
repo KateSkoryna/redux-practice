@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom"
 
+//add navigation to ships
+
 const Navigation = () => {
     return (
         <>

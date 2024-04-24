@@ -7,6 +7,7 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Counter from './components/Counter/Counter'
 import GoalComponent from './components/GoalComponent/GoalComponent'
+import ShipComponent from './components/ShipComponent/ShipComponent'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "goals",
         element: <GoalComponent />,
+      },
+      {
+        path: "ships",
+        element: <ShipComponent />,
       }
     ]
   },

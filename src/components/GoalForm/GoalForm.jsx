@@ -6,11 +6,11 @@ const Form = () => {
     const [goal, setGoal] = useState("");
     const dispatch = useDispatch();
 
-    const handleFormSubmit = (e) => {
+  const handleFormSubmit = (e) => {
         e.preventDefault();
       dispatch(addGoal({
           id: Date.now(),
-        goal,
+          text: goal,
           completed: false,
       }));
     resetForm();
@@ -26,7 +26,7 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form onSubmit={handleFormSubmit} id="goalForm">
       <input
         type="text"
         name="goal"

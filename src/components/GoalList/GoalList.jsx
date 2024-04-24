@@ -1,5 +1,6 @@
-import { useSelector, useDispatch } from "react-redux";
-import { removeGoal } from "../../redux/actions/goalAction";
+/* eslint-disable react/prop-types */
+import { useDispatch, useSelector } from "react-redux";
+import { removeGoal, toggleGoal } from "../../redux/actions/goalAction";
 
 const GoalList = () => {
     const goals = useSelector(state => state.goals);
@@ -10,19 +11,20 @@ const GoalList = () => {
     };
 
     const handleToggle = (id) => {
-        return id;
+        dispatch(toggleGoal(id));
     }
+
 
     return (
         <div>
-            <ul>{goals.map(({id, goal}) => (
+            <ul>{goals.map(({id, text, completed}) => (
                 <li key={id}>
         <input
         type="checkbox"
         onChange={()=> handleToggle(id)}
-        checked={goal.completed}
+        checked={completed}
     />
-                    <p>{goal}</p>
+                    <p>{text}</p>
                     <div>
                     <button onClick={()=> handleRemoveGoal(id)}>Remove</button>
                     </div>

@@ -5,10 +5,10 @@ const initialState = [];
 const shipReducer = createReducer(initialState, (builder) => {
   builder
     .addCase(addShip, (state, action) => {
-      return state.push(action.payload);
+      return [...state, action.payload];
     })
     .addCase(removeShip, (state, action) => {
-      return state.filter((ship) => ship.id !== action.payload.id);
+      return state.filter((ship) => ship.id !== action.payload);
     });
 });
 

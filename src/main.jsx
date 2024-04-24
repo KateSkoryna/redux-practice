@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         path: "ships",
         element: <ShipComponent />,
       }
-    ]
+    ], 
   },
   {
     path: "*",
@@ -36,7 +36,9 @@ const router = createBrowserRouter([
     path: "/counter",
     element: <App />
   }
-])
+], {
+  basename: "/redux-practice",
+})
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={store}>
